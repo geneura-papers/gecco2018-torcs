@@ -1,49 +1,87 @@
-\documentclass[conference]{IEEEtran}
-\IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{graphicx}
-\usepackage{textcomp}
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\documentclass[sigconf]{acmart}
+%%% Local Variables:
+%%% ispell-local-dictionary: "english"
+%%% End:
+
+\usepackage{booktabs} % For formal tables
+
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\acmDOI{10.1145/nnnnnnn.nnnnnnn}
+
+% ISBN
+\acmISBN{978-x-xxxx-xxxx-x/YY/MM}
+
+
+%Conference
+\acmConference[GECCO '18]{the Genetic and Evolutionary Computation
+Conference 2018}{July 15--19, 2018}{Kyoto, Japan}
+\acmYear{2018}
+\copyrightyear{2018}
+
+
+\acmArticle{4}
+\acmPrice{15.00}
+
 \begin{document}
+\title{Getting the pole: designing fitness functions for racing simulators.}
 
-\title{Analyzing and Enhancing the Evaluation Process of Evolutionary Drivers for TORCS\\
-{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
-should not be used}
-\thanks{This work has been supported in part by: Ministerio espa\~{n}ol de
-Econom\'{\i}a y Competitividad under project TIN2014-56494-C4-3-P
-(UGR-EPHEMECH), TIN2017-85727-C4-2-P (UGR-DeepBio) and TEC2015-68752 (also funded by FEDER).}
+\author{Anonymous Author 1}
+\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{Anonymous institute 1}
+  \streetaddress{P.O. Box 1212}
+  \city{Dublin} 
+  \state{Ohio} 
+  \postcode{43017-6221}
 }
+\email{aa1@ai1.com}
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Mohammed Salem}
-\IEEEauthorblockA{\textit{Department of Computer Sciences} \\
-\textit{University of Mascara}\\
-Mascara, Algeria \\
-salem@univ-mascara.dz}
-\and
-\IEEEauthorblockN{2\textsuperscript{nd} Antonio Miguel Mora}
-\IEEEauthorblockA{\textit{Department of Computer Sciences and Technology, ESIT} \\
-\textit{International University of La Rioja (UNIR)}\\
-Granada, Spain\\
-antoniomiguel.mora@unir.net}
-\and
-\IEEEauthorblockN{3\textsuperscript{rd} Juan Julian Merelo}
-\IEEEauthorblockA{\textit{Department of Architecture and Computer Technology} \\
-\textit{University of Granada}\\
-Granada, Spain \\
-jmerelo@ugr.es}
-\and
-\IEEEauthorblockN{4\textsuperscript{th} Pablo Garc\'ia-S\'anchez}
-\IEEEauthorblockA{\textit{Department of Computer Science, ESI} \\
-\textit{University of C\'adiz}\\
-C\'adiz, Spain \\
-pablo.garciasanchez@uca.es}
+\author{Anonymous Author 2}
+\affiliation{%
+  \institution{Anonymous institute 2}
+  \streetaddress{P.O. Box 1212}
+  \city{Dublin} 
+  \state{Ohio} 
+  \postcode{43017-6221}
 }
+\email{2aa@ai2.com}
 
-\maketitle
+\author{Anonymous Author 4}
+\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{Anonymous institute 1}
+  \streetaddress{P.O. Box 1212}
+  \city{Dublin} 
+  \state{Ohio} 
+  \postcode{43017-6221}
+}
+\email{aa4@ai1.com}
+
+\author{Anonymous Author 3}
+\affiliation{%
+  \institution{Anonymous institute 2}
+  \streetaddress{P.O. Box 1212}
+  \city{Dublin} 
+  \state{Ohio} 
+  \postcode{43017-6221}
+}
+\email{3aa@ai2.com}
+
+% The default list of authors is too long for headers.
+\renewcommand{\shortauthors}{A. Author et al.}
+
 
 \begin{abstract}
 	
@@ -55,11 +93,40 @@ To this end, two different fitness functions are studied in several experiments,
 approaches for the selection of the best individual in the evolution, considering the noisy nature of the problem, which leads to the fact that the same individual could obtain very good or very bad results in the same races, and against the same opponents, due to the stochasticity present in the game and in the rivals' AI.
 % Antonio - Complete this with the obtained resulst and conclusions
 \end{abstract}
-\begin{IEEEkeywords}
-Videogames, Fuzzy Controller, TORCS, Steering control, Optimization, Genetic Algorithms
-\end{IEEEkeywords}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003752.10003809.10003716.10011136.10011797.10011799</concept_id>
+<concept_desc>Theory of computation~Evolutionary algorithms</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010520.10010521.10010537.10003100</concept_id>
+<concept_desc>Computer systems organization~Cloud computing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010919.10010172</concept_id>
+<concept_desc>Computing methodologies~Distributed algorithms</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Theory of computation~Evolutionary algorithms}
+\ccsdesc[500]{Computer systems organization~Cloud computing}
+\ccsdesc[300]{Computing methodologies~Distributed algorithms}
+
+\keywords{Cloud Computing, microservices, distributed computing,
+  event-based systems, Kappa architecture}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   INTRODUCTION   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+
+
+\maketitle
+
 \section{Introduction}
 \label{sec:intro}
 
@@ -837,14 +904,18 @@ Genetic Programming algorithm.
 
 Finally, the fuzzy controller could be evolved and adapted to be an efficient autonomous driver for a real car. This could be addressed by considering real-life traffic situations instead of races and, of course, redefining the fitness functions to accomplish other objectives, mainly related with security and comfort.
 
-\section*{Acknowledgments}
+\begin{acks}
 
-This work has been supported in part by: Ministerio espa\~{n}ol de
-Econom\'{\i}a y Competitividad under project TIN2014-56494-C4-3-P
-(UGR-EPHEMECH), TIN2017-85727-C4-2-P (UGR-DeepBio) and TEC2015-68752 (also funded by FEDER).
+  The author would like to acknowledge the support of grants\\
+  taking\\
+  this\\
+  much\\
+  space\\
+
+\end{acks}
 
 
-\bibliographystyle{IEEEtranS}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{fuzzy_torcs}
 
 \end{document}
