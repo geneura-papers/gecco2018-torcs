@@ -84,14 +84,24 @@ Conference 2018}{July 15--19, 2018}{Kyoto, Japan}
 
 
 \begin{abstract}
-	
-In Evolutionary Algorithms, designing a reliable and effective evaluation process for the individuals is a key aspect to care about. This process involves not only the design of a proper fitness function, but also the selection of the best solution for the optimization problem being solved; since this decision might not be easy when uncertainty or `noise' is present in the problem environment.
-Automatically improving the behavioural engine of an autonomous driver for a car racing simulator such as TORCS, is an optimization problem which owns these difficulties. 
-Thus, in this paper we describe an analysis and some proposals to improve the evaluation of optimized fuzzy drivers for TORCS. It starts from preliminary results obtained in previous papers and aims to obtain a more competitive autonomous driver.
-To this end, two different fitness functions are studied in several experiments, along with two  
-% Antonio - don't know how many approaches will we try
-approaches for the selection of the best individual in the evolution, considering the noisy nature of the problem, which leads to the fact that the same individual could obtain very good or very bad results in the same races, and against the same opponents, due to the stochasticity present in the game and in the rivals' AI.
-% Antonio - Complete this with the obtained resulst and conclusions
+
+The process of creating a car that wins races in a racing simulator
+involves an optimization process that must use what is known about the
+race to obtain good results in a priori unknown
+environments. Evolutionary algorithms need a fitness function,
+however, to carry out that optimization process, that is why in this
+paper we set out to design and test several fitness functions that
+would eventually make a car win in all possible scenarios, or at least
+in as many as possible. What we are optimizing is a set of two fuzzy
+controllers, which are computationally complete and have been proved
+in the past to yield good results; however in this paper we will be
+using some heuristics to first select the track in which solo
+optimization is going to be run and then which combination of the
+different measures taken during those races will eventually yield the
+best results when in a real race.
+
+
+
 \end{abstract}
 
 \begin{CCSXML}
